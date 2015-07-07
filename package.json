@@ -1,0 +1,32 @@
+{
+  "name": "windtamer",
+  "version": "0.1.0",
+  "description": "A seafaring incremental adventure!",
+  "main": "index.html",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seemikehack/windtamer.git"
+  },
+  "keywords": [
+    "incremental",
+    "clicker",
+    "game",
+    "rpg",
+    "html",
+    "html5",
+    "sail",
+    "sailing",
+    "sea",
+    "seafaring",
+    "adventure"
+  ],
+  "author": "Michael Atkinson",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/seemikehack/windtamer/issues"
+  },
+  "homepage": "https://github.com/seemikehack/windtamer#readme"
+}
