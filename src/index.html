@@ -3,20 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Seaworthy</title>
+  <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="theme.css">
 </head>
 <body>
-  <h1>Seaworthy!</h1>
-  <table>
-    <tr>
-      <td>Distance</td>
-      <td><span id="distance">0</span>m</td>
-    </tr>
-    <tr>
-      <td>Seaworthiness</td>
-      <td><span id="seaworth">0</span></td>
-    </tr>
-  </table>
-  <button id="row">Row!</button>
+  <div class="playarea">
+    <div class="title">Seaworthy</div>
+    <div class="stats">
+      <div class="stat-container">
+        <p><span id="distance" class="stat">0</span>m</p>
+        <p>Rowed</p>
+      </div>
+      <div class="stat-container">
+        <p><span id="seaworth" class="stat">0</span></p>
+        <p>Seaworth</p>
+      </div>
+    </div>
+    <div class="row">
+      <button id="row">Row!</button>
+    </div>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
