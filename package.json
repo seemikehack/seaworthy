@@ -1,5 +1,5 @@
 {
-  "name": "windtamer",
+  "name": "seaworthy",
   "version": "0.1.0",
   "description": "A seafaring incremental adventure!",
   "main": "index.html",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seemikehack/windtamer.git"
+    "url": "git+https://github.com/seemikehack/seaworthy.git"
   },
   "keywords": [
     "incremental",
@@ -26,7 +26,7 @@
   "author": "Michael Atkinson",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/seemikehack/windtamer/issues"
+    "url": "https://github.com/seemikehack/seaworthy/issues"
   },
-  "homepage": "https://github.com/seemikehack/windtamer#readme"
+  "homepage": "https://github.com/seemikehack/seaworthy#readme"
 }
