@@ -2,7 +2,7 @@ var state = {};
 
 function row() {
   state.accSeaworth++;
-  document.getElementById('distance').textContent = ++state.distance;
+  $('#distance').text(++state.distance);
 }
 
 function seaworth() {
@@ -11,11 +11,11 @@ function seaworth() {
     // FIXME extract constants to configuration
     // TODO extract pricing function
     state.nextSeaworth = 2 + Math.floor(Math.pow(1.05, ++state.seaworth));
-    document.getElementById('seaworth').textContent = state.seaworth;
+    $('#seaworth').text(state.seaworth);
   }
 }
 
-document.getElementById('row').addEventListener('click', function () {
+$('#row').click(function () {
   row();
   seaworth();
 });
