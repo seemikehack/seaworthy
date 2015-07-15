@@ -3,14 +3,16 @@
   margin: 0 auto;
 }
 
+.playarea div {
+  margin-bottom: 20px;
+}
+
 .title {
   font: 8em "Amatic SC", sans-serif;
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .stats {
-  margin-bottom: 40px;
   -webkit-column-count : 2;
      -moz-column-count : 2;
       -ms-column-count : 2;
