@@ -1,3 +1,3 @@
-# Windtamer
+# Seaworthy
 
 A seafaring incremental adventure!
