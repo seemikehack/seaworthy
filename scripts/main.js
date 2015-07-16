@@ -1,5 +1,12 @@
-  var state = {};
 var seaworthy = (function (gameloop) {
+  // defaults, will get overwritten by storage value if it exists
+  // FIXME extract constants to configuration
+  var state = {
+    distance: 0,
+    seaworth: 0,
+    accSeaworth: 0,
+    nextSeaworth: 3
+  };
 
   function row() {
     state.accSeaworth++;
@@ -16,6 +23,10 @@ var seaworthy = (function (gameloop) {
     }
   }
 
+  function autosave() {
+    // FIXME extract constants to configuration
+    localStorage.setItem('seaworthy-data', JSON.stringify(state));
+  }
 
   $('#row').click(function () {
     row();
@@ -23,10 +34,11 @@ var seaworthy = (function (gameloop) {
   });
 
   (function () {
-    state.distance = 0;
-    state.seaworth = 0;
-    state.accSeaworth = 0;
-    state.nextSeaworth = 3;
+    // FIXME extract constants to configuration
+    state = JSON.parse(localStorage.getItem('seaworthy-data')) || state;
+
+    // FIXME extract constants to configuration
+    gameloop.add(autosave, 60);
 
     gameloop.start();
   }());
