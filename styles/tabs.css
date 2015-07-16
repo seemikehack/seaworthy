@@ -7,18 +7,21 @@
 .tab-nav li {
   flex: 1 auto;
   text-align: center;
-  border: 1px solid black;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid black;
   border-radius: 10px 10px 0 0;
 }
 
 .tab-nav .active {
   position: relative;
   z-index: 9001;
+  border: 1px solid black;
   border-bottom: 1px solid white;
 }
 
 .tab-nav li a {
-  padding: 10px;
+  padding: 0 20px;
   text-decoration: none;
   color: black;
   font: 2em "IM Fell DW Pica SC", serif;
