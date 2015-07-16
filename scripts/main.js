@@ -28,14 +28,20 @@ var seaworthy = (function (gameloop) {
     localStorage.setItem('seaworthy-data', JSON.stringify(state));
   }
 
+  function load() {
+    // FIXME extract constants to configuration
+    state = JSON.parse(localStorage.getItem('seaworthy-data')) || state;
+    $('#distance').text(state.distance);
+    $('#seaworth').text(state.seaworth);
+  }
+
   $('#row').click(function () {
     row();
     seaworth();
   });
 
   (function () {
-    // FIXME extract constants to configuration
-    state = JSON.parse(localStorage.getItem('seaworthy-data')) || state;
+    load();
 
     // FIXME extract constants to configuration
     gameloop.add(autosave, 60);
