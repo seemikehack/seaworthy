@@ -8,6 +8,18 @@ var seaworthy = (function (gameloop) {
     nextSeaworth: 3
   };
 
+  function autosave() {
+    // FIXME extract constants to configuration
+    localStorage.setItem('seaworthy-data', JSON.stringify(state));
+  }
+
+  function load() {
+    // FIXME extract constants to configuration
+    state = JSON.parse(localStorage.getItem('seaworthy-data')) || state;
+    $('#distance').text(state.distance);
+    $('#seaworth').text(state.seaworth);
+  }
+
   function row() {
     state.accSeaworth++;
     $('#distance').text(++state.distance);
@@ -21,18 +33,6 @@ var seaworthy = (function (gameloop) {
       state.nextSeaworth = 2 + Math.floor(Math.pow(1.05, ++state.seaworth));
       $('#seaworth').text(state.seaworth);
     }
-  }
-
-  function autosave() {
-    // FIXME extract constants to configuration
-    localStorage.setItem('seaworthy-data', JSON.stringify(state));
-  }
-
-  function load() {
-    // FIXME extract constants to configuration
-    state = JSON.parse(localStorage.getItem('seaworthy-data')) || state;
-    $('#distance').text(state.distance);
-    $('#seaworth').text(state.seaworth);
   }
 
   $('#row').click(function () {
